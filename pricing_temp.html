@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Pomegranate Price Prediction</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+    }
+
+    .navbar-custom {
+      background-color: #4CAF50;
+      /* Change to green */
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-toggler {
+      border: 2px solid white;
+      /* Add white border */
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .navbar-nav {
+      text-align: center;
+      /* Center the text of the nav items */
+    }
+
+    .navbar-collapse {
+      justify-content: center;
+      /* Center the content of the collapsed navbar */
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .calendar-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .calendar-container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+
+    .calendar-container input[type="date"],
+    .calendar-container select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .calendar-container p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand logo">Pomegranate</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./quality">Quality</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="content">
+    <div class="calendar-container">
+      <h1>Select a Date and Location</h1>
+      <select id="state-picker" onchange="updateDistricts()">
+        <option value="">Select a State</option>
+        <option value="AndamanandNicobarIslands">Andaman and Nicobar Islands</option>
+        <option value="AndhraPradesh">Andhra Pradesh</option>
+        <option value="ArunachalPradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="DadraandNagarHaveliandDamanAndDiu">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="HimachalPradesh">Himachal Pradesh</option>
+        <option value="JammuandKashmir">Jammu and Kashmir</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Ladakh">Ladakh</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="MadhyaPradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Puducherry">Puducherry</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="TamilNadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="UttarPradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="WestBengal">West Bengal</option>
+
+        <!-- Add more states as needed -->
+      </select>
+      <select id="district-picker" disabled>
+        <option value="">Select a District</option>
+        <!-- Districts will be populated based on the selected state -->
+      </select>
+      <input type="date" id="date-picker" onchange="getPomegranatePrice()">
+      <p id="price-display">Select a date and location to see the predicted price of pomegranates.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Pomegranate Pricing Inc. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@pomegranatepricing.com" style="color: #4CAF50;">info@pomegranatepricing.com</a>
+    </p>
+  </div>
+
+  <script>
+    const districtsByState = {
+      AndamanandNicobarIslands: ["Nicobar", "North and Middle Andaman", "South Andaman"],
+      AndhraPradesh: ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Krishna"],
+      ArunachalPradesh: ["Anjaw", "Changlang", "Dibang Valley", "East Kameng", "East Siang"],
+      Assam: ["Baksa", "Barpeta", "Biswanath", "Bongaigaon", "Cachar"],
+      Bihar: ["Araria", "Arwal", "Aurangabad", "Banka", "Begusarai"],
+      Chandigarh: ["Chandigarh"],
+      Chhattisgarh: ["Balod", "Baloda Bazar", "Balrampur", "Bastar", "Bemetara"],
+      DadraandNagarHaveliandDamanAndDiu: ["Dadra and Nagar Haveli", "Daman", "Diu"],
+      Delhi: ["Central Delhi", "East Delhi", "New Delhi", "North Delhi", "North East Delhi"],
+      Goa: ["North Goa", "South Goa"],
+      Gujarat: ["Ahmedabad", "Bharuch", "Rajkot", "Vadodara(Baroda)"],
+      Haryana: ["Ambala", "Bhiwani", "Faridabad", "Fatehabad", "Gurgaon", "Hissar", "Karnal", "Kurukshetra", "Mahendragarh-Narnaul", "Mewat", "Palwal", "Panipat", "Rohtak", "Sirsa", "Sonipat", "Yamuna Nagar"],
+      HimachalPradesh: ["Bilaspur", "Chamba", "Hamirpur", "Kangra", "Kullu", "Mandi", "Shimla", "Solan", "Una"],
+      JammuandKashmir: ["Anantnag", "Jammu", "Kathua", "Rajouri", "Srinagar", "Udhampur"],
+      Jharkhand: ["Dhanbad", "Garhwa", "Hazaribagh"],
+      Karnataka: ["Bangalore", "Dharwad", "Davangere", "Gadag", "Gulbarga", "Kolar", "Mangalore(Dakshin Kannad)", "Mysore", "Udupi"],
+      Kerala: ["Idukki", "Malappuram"],
+      Ladakh: ["Kargil", "Leh"],
+      Lakshadweep: ["Lakshadweep"],
+      MadhyaPradesh: ["Bhopal", "Burhanpur", "Chhatarpur", "Guna", "Gwalior", "Harda", "Indore", "Narsinghpur", "Satna", "Sheopur", "Ujjain"],
+      Maharashtra: ["Ahmednagar", "Amarawati", "Aurangabad", "Chandrapur", "Jalgaon", "Mumbai", "Nagpur", "Nashik", "Pune", "Sangli", "Sholapur"],
+      Manipur: ["Bishnupur", "Chandel", "Churachandpur", "Imphal East", "Imphal West"],
+      Meghalaya: ["East Garo Hills", "East Jaintia Hills", "East Khasi Hills", "North Garo Hills", "Ri Bhoi"],
+      Mizoram: ["Aizawl", "Champhai", "Kolasib", "Lawngtlai", "Lunglei"],
+      Nagaland: ["Dimapur", "Kiphire", "Kohima", "Longleng", "Mokokchung"],
+      Odisha: ["Angul", "Balangir", "Balasore", "Bargarh", "Bhadrak"],
+      Puducherry: ["Karaikal", "Mahe", "Puducherry", "Yanam"],
+      Punjab: ["Amritsar", "Barnala", "Bhatinda", "Faridkot", "Fatehgarh", "Fazilka", "Ferozpur", "Gurdaspur", "Hoshiarpur", "Jalandhar", "kapurthala", "Ludhiana", "Mansa", "Mohali", "Muktsar", "Nawanshahr", "Pathankot", "Patiala", "Ropar (Rupnagar)", "Sangrur"],
+      Rajasthan: ["Ajmer", "Alwar", "Kota"],
+      Sikkim: ["East Sikkim", "North Sikkim", "South Sikkim", "West Sikkim"],
+      TamilNadu: ["Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore"],
+      Telangana: ["Hyderabad", "Warangal"],
+      Tripura: ["Dhalai", "Gomati", "Khowai", "North Tripura", "Sepahijala"],
+      UttarPradesh: ["Agra", "Aligarh", "Allahabad", "Ambedkarnagar", "Auraiya", "Azamgarh", "Badaun", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", "Basti", "Bijnor", "Bulandshahar", "Chitrakut", "Deoria", "Etah", "Faizabad", "Farukhabad", "Firozabad", "Gautam Budh Nagar", "Ghaziabad", "Gonda", "Gorakhpur", "Hamirpur", "Hardoi", "Hathras", "Jalaun (Orai)", "Jaunpur", "Jhansi", "Jyotiba Phule Nagar", "Kannuj", "Kanpur", "Kaushambi", "Khiri (Lakhimpur)", "Lakhimpur", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Meerut", "Mirzapur", "Muradabad", "Muzaffarnagar", "Padrauna(Kusinagar)", "Pillibhit", "Pratapgarh", "Raebarelli", "Rampur", "Saharanpur", "Sant Kabir Nagar", "Shahjahanpur", "Sitapur", "Sultanpur", "Unnao", "Varanasi"],
+      Uttarakhand: ["Dehradoon", "Garhwal (Pauri)", "Haridwar", "Nanital", "Udham Singh Nagar"],
+      WestBengal: ["Kolkata"]
+
+      // Add more states and their districts as needed
+    };
+
+    function updateDistricts() {
+      const statePicker = document.getElementById("state-picker");
+      const districtPicker = document.getElementById("district-picker");
+      const selectedState = statePicker.value;
+
+      // Clear previous districts
+      districtPicker.innerHTML = '<option value="">Select a District</option>';
+
+      if (selectedState && districtsByState[selectedState]) {
+        // Enable the district dropdown and populate with relevant districts
+        districtPicker.disabled = false;
+        districtsByState[selectedState].forEach(district => {
+          const option = document.createElement("option");
+          option.value = district;
+          option.textContent = district;
+          districtPicker.appendChild(option);
+        });
+      } else {
+        districtPicker.disabled = true;
+      }
+    }
+
+    function getPomegranatePrice() {
+      const date = new Date(document.getElementById('date-picker').value);
+      const state = document.getElementById('state-picker').value;
+      const district = document.getElementById('district-picker').value;
+      const today = new Date();
+      const maxDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 10); // 10 days from today
+
+      if (!state || !district) {
+        alert("Please select a state and a district.");
+        return;
+      }
+
+      if (date > maxDate) {
+        alert("Please select a date within the next 10 days.");
+        document.getElementById('date-picker').value = ''; // Reset the date picker value
+        return;
+      }
+
+      if (date < today) {
+        alert("Please select a date starting from today.");
+        document.getElementById('date-picker').value = ''; // Reset the date picker value
+        return;
+      }
+
+      if (date) {
+        // Here you would integrate with your model to get the price prediction.
+        // For demonstration, let's assume a dummy price is returned.
+        const dummyPrice = '$3.50 per kg';
+        document.getElementById('price-display').textContent = `Predicted price for ${district}, ${state} on ${date.toLocaleDateString()}: ${dummyPrice}`;
+      }
+    }
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

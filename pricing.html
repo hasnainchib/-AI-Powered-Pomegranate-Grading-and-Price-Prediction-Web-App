@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ROSA- Restaurant</title>
+    <meta name="description" content="ROSA is an enchanting Parallax Restaurant WordPress Theme that allows you to tell your story in an enjoyable way, perfect for restaurants or coffee shops.">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/rosa-favicon.png">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+    <!--Fonts-->
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--FontAwesome-->
+
+  <style>
+      .content {
+      flex: 1;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 2rem;
+      height: 100%;
+    }
+
+    .calendar-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      /* margin-top: 8rem; */
+    }
+
+    .calendar-container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      
+      color: black;
+    }
+
+    .calendar-container input[type="date"],
+    .calendar-container select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .calendar-container p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    /*Start Global*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 12px;
+}
+body.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+
+/*End Global*/
+
+/*Start Mutual*/
+p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form label, .contact .form form button {
+    font-family: Cabin, sans-serif;
+}
+.fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
+    color: #a96700;
+}
+header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
+    background-color: #a96700;
+}
+header .navigation-bar ul li, header .text, .about-us .text, .reservation .text, .menu .box-model, .menu .text, .fixed-image .text, footer, .copyright, .contact .text i {
+    text-align: center;
+}
+header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
+    display: flex;
+}
+header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
+    transition: .3s;
+}
+header, header nav .toggle span, header .navigation-bar a, header .text, header .text .arrow .left, header .text .arrow .right, .recipes, .menu .box-image-container, .fixed-image .text, .copyright, .copyright .arrow-up {
+    position: relative;
+}
+header nav .toggle, header .navigation-bar .underline, header .text .arrow .left:after, header .text .arrow .right:after, header .svg-down, header .arrow-down, .recipes .text, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .box-image-container .box-image, .copyright .svg-up {
+    position: absolute;
+}
+.recipes .text, .fixed-image .text, .menu .box-image-container, .menu .box-image-container .box-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+header nav, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, .menu .box-model, .menu .box-image-container, .menu .box-image-container .box-image {
+    width: 100%;
+}
+button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .menu-image-container .image img, footer .newsletter i, .copyright .arrow-up {
+    cursor: pointer;
+}
+.dots .active, header nav.active,header nav.active .toggle.active span, header .navigation-bar .underline, header .text .arrow .left, header .text .arrow .right, header .text .button button, .contact form button {
+    background-color: #fff;
+}
+ header nav .toggle span
+{
+    background-color: #000;
+
+}
+h1, h3,header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
+    color: #ffffff;
+}
+header .navigation-bar a{
+    color: #000;
+}
+header .navigation-bar a{
+    color:#000
+}
+header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
+    left: 0;
+}
+header .text .arrow .left:after, header .text .arrow .right:after, header .text span, footer .social-media .links a, footer .newsletter i, .copyright .arrow-up, .contact .text i, .contact .form form label {
+    display: inline-block;
+}
+/*End Mutual*/
+
+
+
+
+/*Start Loader*/
+.loader-wrap, .loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.loader-wrap {
+    background-color: #d05f5f;
+    z-index: 30;
+}
+.loader-wrap.remove {
+    display: none;
+}
+.loader {
+    margin: auto;
+    height: 40px;
+    width: 80px;
+    box-sizing: border-box;
+}
+.loader .loader-item {
+    position: relative;
+    float: left;
+    height: 40px;
+    width: 4px;
+    margin: 0 2px;
+    background-color: #fff;
+}
+.loader .loader-item:nth-child(1) {
+    -webkit-animation: loader-item-1 2s linear infinite;
+    animation: loader-item-1 2s linear infinite;
+}
+.loader .loader-item:nth-child(2) {
+    -webkit-animation: loader-item-2 2s linear infinite;
+    animation: loader-item-2 2s linear infinite;
+}
+.loader .loader-item:nth-child(3) {
+    -webkit-animation: loader-item-3 2s linear infinite;
+    animation: loader-item-3 2s linear infinite;
+}
+.loader .loader-item:nth-child(4) {
+    -webkit-animation: loader-item-4 2s linear infinite;
+    animation: loader-item-4 2s linear infinite;
+}
+.loader .loader-item:nth-child(5) {
+    -webkit-animation: loader-item-5 2s linear infinite;
+    animation: loader-item-5 2s linear infinite;
+}
+.loader .loader-item:nth-child(6) {
+    -webkit-animation: loader-item-6 2s linear infinite;
+    animation: loader-item-6 2s linear infinite;
+}
+.loader .loader-item:nth-child(7) {
+    -webkit-animation: loader-item-7 2s linear infinite;
+    animation: loader-item-7 2s linear infinite;
+}
+.loader .loader-item:nth-child(8) {
+    -webkit-animation: loader-item-8 2s linear infinite;
+    animation: loader-item-8 2s linear infinite;
+}
+.loader .loader-item:nth-child(9) {
+    -webkit-animation: loader-item-9 2s linear infinite;
+    animation: loader-item-9 2s linear infinite;
+}
+.loader .loader-item:nth-child(10) {
+    -webkit-animation: loader-item-10 2s linear infinite;
+    animation: loader-item-10 2s linear infinite;
+}
+.loader:after {
+    content: 'Loading...';
+    font-size: 16px;
+    font-family: Arial, serif;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -32px;
+    margin: auto;
+}
+@-webkit-keyframes loader-item-1 {
+    1% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    11% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    21% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-1 {
+    1% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    11% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    21% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-2 {
+    7% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    17% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    27% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-2 {
+    7% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    17% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    27% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-3 {
+    13% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    23% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    33% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-3 {
+    13% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    23% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    33% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-4 {
+    19% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    29% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    39% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-4 {
+    19% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    29% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    39% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-5 {
+    25% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    35% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    45% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-5 {
+    25% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    35% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    45% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-6 {
+    31% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    41% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    51% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-6 {
+    31% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    41% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    51% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-7 {
+    37% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    47% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    57% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-7 {
+    37% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    47% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    57% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-8 {
+    43% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    53% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    63% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-8 {
+    43% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    53% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    63% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-9 {
+    49% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    59% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    69% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-9 {
+    49% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    59% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    69% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes loader-item-10 {
+    55% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    65% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    75% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes loader-item-10 {
+    55% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    65% {
+        -webkit-transform: scaleY(1.4);
+        transform: scaleY(1.4);
+    }
+    75% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+/*End Loader*/
+
+/*Start Home Page*/
+
+/* Start Header */
+header {
+    position: relative; /* Ensure content stays on top of the background */
+    height: calc(100vh - 22px);
+    overflow: hidden; /* Hide overflow content to prevent blurring */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://imageshack.com/i/po2loGMMj") no-repeat fixed bottom;
+    background-size: cover;
+    filter: blur(7px); /* Apply blur effect only to the background */
+    z-index: -1; /* Place the blurred background behind other content */
+}
+
+.header-content {
+    position: relative; /* Ensure content stays above blurred background */
+    padding: 20px 70px;
+    z-index: 1; /* Ensure content is above the blurred background */
+}
+
+
+header nav {
+    position: fixed;
+    top: 0;
+    padding: 36px 36px 20px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* backdrop-filter: blur(7px); */
+    
+}
+
+header nav .toggle {
+    display: none;
+    top: 26px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 21;
+}
+header nav .toggle:focus {
+    outline: none;
+}
+header nav.active .toggle span {
+    background-color: #000;
+}
+header nav .toggle.active {
+    left: 32%;
+}
+header nav .toggle.active .first {
+    top: 16px;
+    transform: rotate(-45deg);
+}
+header nav .toggle.active .last {
+    top: 0;
+    transform: rotate(45deg);
+}
+header nav .toggle .hide {
+    transition: 0s;
+    visibility: hidden;
+}
+header nav .toggle span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 40px;
+}
+header nav .toggle span:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+header nav .logo {
+    flex-basis: 56%;
+    padding-left: 50px;
+}
+/* .navigation-bar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+} */
+header .navigation-bar.show {
+    width: 40%;
+}
+header .navigation-bar.show a {
+    color: #ccc !important;
+}
+header .navigation-bar.show a:hover {
+    color: #fff !important;
+}
+header .navigation-bar ul li {
+    /* flex: 1; */
+    padding: 0 18px;
+}
+header .navigation-bar a {
+    text-decoration: none;
+    transition: all .5s;
+    font-size: 16px;
+}
+header nav.active .navigation-bar a {
+    color: #000;
+}
+header .navigation-bar .underline {
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -4px;
+    transition: all .3s;
+    display: block;
+}
+header .text {
+    top: 24%;
+}
+header .text h1 {
+    margin-bottom: 0;
+}
+header .text .arrow .left, header .text .arrow .right {
+    height: 3px;
+    width: 100px;
+}
+header .text .arrow .left {
+    left: -4%;
+}
+header .text .arrow .right {
+    right: -4%;
+}
+header .text .arrow .left:after, header .text .arrow .right:after {
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: #fff;
+    top: -8px;
+}
+header .text .arrow .right:after {
+    right: 0;
+    border-color: transparent #fff transparent transparent;
+}
+header .text .arrow .fa-asterisk {
+    vertical-align: super;
+}
+header .text span {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+header .text .button button, .contact form button {
+    border: none;
+    padding: 9px 18px;
+    letter-spacing: 2.4px;
+    font-size: 12px;
+    font-family: source_sans_problack, sans-serif;
+    border-radius: 3px;
+}
+header .text .button button, .contact form button:focus {
+    outline: none;
+}
+header .svg-down {
+    bottom: 0;
+    left: 50%;
+    z-index: 5;
+    margin-left: -96px;
+    margin-bottom: -12px;
+    color: #fff;
+}
+header .arrow-down {
+    width: 70px;
+    height: 50px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/arrow-down.png") no-repeat center;
+}
+/*End Header*/
+
+
+/*Start Footer*/
+footer {
+    background-color: #121212;
+    padding: 60px 20px;
+}
+footer .text {
+    max-width: 500px;
+    margin: auto;
+}
+footer .text h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1.9px;
+    margin-bottom: 25px;
+}
+footer .text .fa-asterisk {
+    font-size: 12px;
+}
+footer .text p {
+    line-height: 27px;
+}
+footer .contact-container {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: auto;
+}
+footer .contact-container > div {
+    flex: 1;
+}
+footer .contact-container h3 {
+    font-size: 19px;
+    letter-spacing: 1.9px;
+}
+footer .social-media .links a {
+    margin: 0 10px;
+    font-size: 25px;
+}
+footer .newsletter input {
+    padding: 10px;
+    width: 270px;
+    background-color: #eee;
+    border: none;
+    margin-left: -15px;
+}
+footer .newsletter i {
+    margin-left: -40px;
+    vertical-align: middle;
+    font-size: 21px;
+}
+.copyright {
+    padding: 15px 40px 30px;
+    background-color: #262526;
+}
+.copyright .svg-up {
+    top: 0;
+    left: 50%;
+    margin-left: -96px;
+    margin-top: -50px;
+}
+.copyright .arrow-up {
+    width: 40px;
+    height: 30px;
+    top: -45px;
+    color: #fff;
+    line-height: 1.9
+}
+.copyright ul {
+    justify-content: center;
+}
+.copyright li {
+    color: #919191;
+    font-size: 14px;
+}
+.copyright li:not(:last-of-type):after {
+    content: '•';
+    margin: 10px;
+}
+.copyright .CTA {
+    margin-top: 25px;
+}
+.copyright .CTA li a {
+    color: #919191;
+}
+
+/*End Footer*/
+
+/*End Home Page*/
+
+/*Start Contact Page*/
+.contact-header {
+    background-image: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988526/contact-food.jpg");
+    height: 40vh;
+}
+.contact {
+    padding: 78px 40px;
+}
+.contact > div {
+    flex: 50%;
+}
+.contact .text p {
+    margin-bottom: 30px;
+}
+.contact .text i {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    line-height: 48px;
+    font-size: 24px;
+}
+.contact .text h2 {
+    font-family: source_sans_problack, sans-serif;
+    font-size: 24px;
+    color: #262626;
+    letter-spacing: 2.4px;
+    margin-bottom: 20px;
+}
+.contact .form {
+    margin-left: 48px;
+}
+.contact .form form label {
+    margin-bottom: 5px;
+    color: #515151;
+}
+.contact .form form input, .contact .form form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 2px solid #D8D8D8;
+    outline: none;
+}
+.contact .form form input:focus, .contact .form form textarea:focus {
+    border-color: #a96700;
+    box-shadow: 0 1px 1px #737373;
+}
+.contact .form form textarea {
+    height: 212px;
+    resize: none;
+}
+.contact .form form button {
+    background-color: #262526;
+    padding: 12px 30px;
+    font-size: 12px;
+}
+/*End Contact Page*/
+
+/*Start Home Page Responsive*/
+
+@media (max-width: 1200px) {
+    .menu, .about-us, .reservation {
+        padding: 60px 40px;
+    }
+    .about-us .text, .reservation .text {
+        padding: 0 32px 0 0;
+    }
+    .about-us .image-container, .reservation .image-container {
+        align-items: center;
+    }
+    .menu .text {
+        padding: 0 0 0 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding: 0;
+    }
+    .dots {
+        display: none;
+    }
+    header {
+        height: calc(100vh - 10px);
+    }
+    header nav .logo {
+        padding-left: 0;
+    }
+    .about-us {
+        display: block;
+        padding-top: 50px;
+    }
+    .about-us .text , .reservation .text {
+        padding: 0 0 40px;
+    }
+    .about-us .image-container .image1, .reservation .image-container .image1 {
+        margin-left: 0;
+    }
+    .menu {
+        display: block;
+        padding: 60px 20px 60px 40px;
+    }
+    .menu .text {
+        padding: 20px 20px 0 0;
+    }
+    .reservation {
+        display: block;
+        padding: 30px 20px 60px;
+    }
+    .contact {
+        display: block;
+        padding: 78px 20px;
+    }
+    .contact .form {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: block;
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding-top: 25px;
+    }
+    header nav .toggle {
+        display: block;
+    }
+    header .navigation-bar {
+        position: fixed;
+        top: 0;
+        left: -174px;
+        height: 100%;
+        background-color: #262526;
+        overflow: hidden;
+        z-index: 20;
+        padding: 40px;
+    }
+    header .navigation-bar ul {
+        display: block;
+        padding-top: 40px;
+    }
+    header .navigation-bar ul li {
+        text-align: left;
+        padding: 14px 0;
+    }
+    footer .contact-container {
+        display: block;
+    }
+    footer .social-media {
+        margin-bottom: 40px;
+    }
+    .copyright ul {
+        display: block;
+        margin-top: -20px;
+    }
+    .copyright li {
+        margin-bottom: 5px;
+    }
+    .copyright li:not(:last-of-type):after {
+        content: '';
+    }
+
+}
+
+@media (max-width: 576px) {
+    h3, h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size:90px
+    }
+    header {
+        padding: 0;
+    }
+    header nav .logo {
+        padding-left: 0;
+    }
+    header nav .toggle.active {
+        left: 36%;
+    }
+    header .navigation-bar.show {
+        padding: 20px;
+        width: 48%;
+    }
+    .about-us, .reservation {
+        padding: 60px 20px;
+    }
+    .menu {
+        padding: 60px 0 60px 20px;
+    }
+}
+/*End Home Page Responsive*/
+  </style>
+</head>
+
+<body class="stop-scroll">
+
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!--Start loader-->
+  <div class="loader-wrap">
+      <div class="loader">
+          <span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span>
+      </div>
+  </div>
+  <!--End loader-->
+
+  <!--Start Dots-->
+  <div class="dots">
+      <div class="active one" data-x="header"></div>
+      <div class="two" data-x=".recipes"></div>
+      <div class="three" data-x=".fixed-image"></div>
+  </div>
+  <!--End Dots-->
+
+ <!--Start Header-->
+  <header>
+      <nav>
+          <div class="logo">
+              <a href="index.html"><img src="https://imageshack.com/i/poDzTZctp" alt="Rosa Logo"></a>
+          </div>
+          <div class="toggle">
+              <span class="first"></span>
+              <span class="middle"></span>
+              <span class="last"></span>
+          </div>
+          <div class="navigation-bar">
+              <ul>
+                  <li><a href="./home">Home<span class="underline"></span></a></li>
+               
+                  <li class="active"><a href="/pricing">Pricing<span class="underline"></span></a></li>
+                  <li><a href="./quality">Quality<span class="underline"></span></a></li>
+                  <li><a href="./contact">Contact Us<span class="underline"></span></a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="content">
+        <div class="calendar-container">
+          <h1>Select a Date and Location</h1>
+          <select id="state-picker" onchange="updateDistricts()">
+            <option value="">Select a State</option>
+            <option value="AndamanandNicobarIslands">Andaman and Nicobar Islands</option>
+            <option value="AndhraPradesh">Andhra Pradesh</option>
+            <option value="ArunachalPradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="DadraandNagarHaveliandDamanAndDiu">Dadra and Nagar Haveli and Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="HimachalPradesh">Himachal Pradesh</option>
+            <option value="JammuandKashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="MadhyaPradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="TamilNadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="UttarPradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="WestBengal">West Bengal</option>
+    
+            <!-- Add more states as needed -->
+          </select>
+          <select id="district-picker" disabled>
+            <option value="">Select a District</option>
+            <!-- Districts will be populated based on the selected state -->
+          </select>
+          <input type="date" id="date-picker" onchange="getPomegranatePrice()">
+          <p id="price-display">Select a date and location to see the predicted price of pomegranates.</p>
+        </div>
+      </div>
+      
+  </header>
+  <!--End Header-->
+
+
+
+    <!--Start Footer-->
+    <footer>
+        <div class="text">
+            <h2>ABOUT POMEGRANATE</h2>
+            <div><i class="fas fa-asterisk"></i></div>
+            <p>Meet our game-changing Pomegranate Segregator: 98.7% accuracy in sorting, powered by LSTM, CNN, and decision trees. Arduino-driven automation ensures seamless operation, while our 92% accurate price prediction model empowers informed decisions, revolutionizing the industry. Welcome to the future of pomegranate processing.</p>
+        </div>
+        <div class="contact-container">
+          <div class="social-media">
+              <h3>Follow Along</h3>
+              <div class="links">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-facebook-square"></i></a>
+                  <a href="#"><i class="fab fa-pinterest"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+            <div class="newsletter">
+              <h3>NewsLetter</h3>
+                <form method="post">
+                    <input type="email" name="email" placeholder="Type Your Email">
+                    <i class="fas fa-envelope"></i>
+                </form>
+            </div>
+        </div>
+    </footer>
+  <!--End Footer-->
+
+<!--Start Copy-Right-->
+  <div class="copyright">
+      <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+      <i class="fas fa-angle-double-up arrow-up"></i>
+      <ul class="info">
+        <li>&copy; Pomegranate 2024</li>
+        <li>Thapar University, Patiala</li>
+        <li>Tel: XXXXX XXXXX</li>
+        <li>Handcrafted with love by <a href="#">Sicilian</a> Team</li>
+      </ul>
+      <ul class="CTA">
+          <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+          <li><a href="#">CONTACT THE TEAM</a></li>
+      </ul>
+  </div>
+  <script>
+    // constants
+    const body = document.querySelector("body"),
+        loader = document.querySelector(".loader-wrap"),
+        links = document.querySelectorAll('a[href="#"]'),
+        nav = document.querySelector("header nav"),
+        navToggle = document.querySelector("header nav .toggle"),
+        navSpanMiddle = document.querySelector("header nav .toggle .middle"),
+        navNavigationBar = document.querySelector("header nav .navigation-bar"),
+        navNavigationBarLi = document.querySelectorAll(
+            "header nav .navigation-bar li"
+        ),
+        headerText = document.querySelector("header .text"),
+        headerSection = document.querySelector("header"),
+        aboutSection = document.querySelector(".about-us"),
+        recipeSection = document.querySelector(".recipes"),
+        menuSection = document.querySelector(".menu"),
+        fixedImageSection = document.querySelector(".fixed-image"),
+        footerSection = document.querySelector("footer"),
+        dotOne = document.querySelector(".dots .one"),
+        dotTwo = document.querySelector(".dots .two"),
+        dotThree = document.querySelector(".dots .three"),
+        dots = document.querySelectorAll(".dots > div"),
+        logoImage = document.querySelector("header nav .logo img"),
+        svgDown = document.querySelector("header .arrow-down"),
+        svgUp = document.querySelector(".copyright .arrow-up"),
+        menuImgs = document.querySelectorAll(".menu .menu-image-container img"),
+        boxModel = document.querySelector(".menu .box-model"),
+        menuImageContainer = document.querySelector(".menu-image-container"),
+        boxModelArrow = document.querySelector(".menu .box-model .arrow"),
+        boxModelImage = document.querySelector(".menu .box-model img"),
+        pageTitle = document.querySelector("title");
+
+    // remove loader
+    function fadeOutEffect() {
+        const fadeEffect = setInterval(function () {
+            if (!loader.style.opacity) {
+                loader.style.opacity = 1;
+            }
+            if (loader.style.opacity > 0) {
+                loader.style.opacity -= 0.4;
+            } else {
+                body.classList.remove('stop-scroll');
+                loader.classList.add('remove');
+                clearInterval(fadeEffect);
+            }
+        }, 100);
+    }
+    window.addEventListener("load", fadeOutEffect);
+
+    // prevent links click hash
+    links.forEach(link =>
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+        })
+    );
+
+    // toggle hamburger menu button
+    navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navSpanMiddle.classList.toggle("hide");
+        navNavigationBar.classList.toggle("show");
+    });
+
+    // show active navigationbar li
+    navNavigationBarLi.forEach(li =>
+        li.addEventListener("click", () => {
+            const arr = Array.from(li.parentElement.children);
+            arr.forEach(li => li.classList.remove("active"));
+            li.classList.add("active");
+        })
+    );
+
+    // // svg-up smooth scroll
+    // svgUp.addEventListener("click", () => {
+    //     window.scroll({
+    //         top: 0,
+    //         behavior: "smooth"
+    //     });
+    // });
+
+    window.onscroll = function () {
+        // make navbar fixed & change logo color
+        if (window.pageYOffset > headerSection.offsetHeight - 75) {
+            nav.classList.add("active");
+            logoImage.src = "https://imageshack.com/i/posKvp3dp";
+        } else {
+            nav.classList.remove("active");
+            logoImage.src = "https://imageshack.com/i/poDzTZctp";
+        }
+
+        // header welcome fade out and in
+        if (window.pageYOffset > 0) {
+            headerText.style.opacity = -window.pageYOffset / 300 + 1;
+        }
+        // home page JS
+        if (pageTitle.text === "ROSA- Restaurant") {
+            //change dots background color
+            if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
+                dots.forEach(dot => dot.classList.remove("black"));
+                dotTwo.classList.remove("active");
+                dotOne.classList.add("active");
+            } else if (
+                window.pageYOffset > headerSection.offsetHeight * 0.5 &&
+                window.pageYOffset < recipeSection.offsetTop * 0.72
+            ) {
+                dots.forEach(dot => dot.classList.add("black"));
+            } else if (
+                window.pageYOffset > recipeSection.offsetTop * 0.75 &&
+                window.pageYOffset < menuSection.offsetTop * 0.81
+            ) {
+                dots.forEach(dot => dot.classList.remove("black"));
+                dotOne.classList.remove("active");
+                dotThree.classList.remove("active");
+                dotTwo.classList.add("active");
+            } else if (
+                window.pageYOffset > menuSection.offsetTop * 0.81 &&
+                window.pageYOffset < fixedImageSection.offsetTop * 0.86
+            ) {
+                dots.forEach(dot => dot.classList.add("black"));
+                dotThree.classList.remove("active");
+                dotTwo.classList.add("active");
+            } else if (
+                window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
+                window.pageYOffset < footerSection.offsetTop * 0.72
+            ) {
+                dots.forEach(dot => dot.classList.remove("black"));
+                dotTwo.classList.remove("active");
+                dotThree.classList.add("active");
+            } else if (
+                window.pageYOffset > footerSection.offsetTop * 0.72 &&
+                window.pageYOffset < footerSection.offsetTop * 0.901
+            ) {
+                dots.forEach(dot => dot.classList.add("black"));
+            } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
+                dots.forEach(dot => dot.classList.remove("black"));
+            }
+        }
+    };
+
+    
+    const districtsByState = {
+        AndamanandNicobarIslands: ["Nicobar", "North and Middle Andaman", "South Andaman"],
+        AndhraPradesh: ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Krishna"],
+        ArunachalPradesh: ["Anjaw", "Changlang", "Dibang Valley", "East Kameng", "East Siang"],
+        Assam: ["Baksa", "Barpeta", "Biswanath", "Bongaigaon", "Cachar"],
+        Bihar: ["Araria", "Arwal", "Aurangabad", "Banka", "Begusarai"],
+        Chandigarh: ["Chandigarh"],
+        Chhattisgarh: ["Balod", "Baloda Bazar", "Balrampur", "Bastar", "Bemetara"],
+        DadraandNagarHaveliandDamanAndDiu: ["Dadra and Nagar Haveli", "Daman", "Diu"],
+        Delhi: ["Central Delhi", "East Delhi", "New Delhi", "North Delhi", "North East Delhi"],
+        Goa: ["North Goa", "South Goa"],
+        Gujarat: ["Ahmedabad", "Bharuch", "Rajkot", "Vadodara(Baroda)"],
+        Haryana: ["Ambala", "Bhiwani", "Faridabad", "Fatehabad", "Gurgaon", "Hissar", "Karnal", "Kurukshetra", "Mahendragarh-Narnaul", "Mewat", "Palwal", "Panipat", "Rohtak", "Sirsa", "Sonipat", "Yamuna Nagar"],
+        HimachalPradesh: ["Bilaspur", "Chamba", "Hamirpur", "Kangra", "Kullu", "Mandi", "Shimla", "Solan", "Una"],
+        JammuandKashmir: ["Anantnag", "Jammu", "Kathua", "Rajouri", "Srinagar", "Udhampur"],
+        Jharkhand: ["Dhanbad", "Garhwa", "Hazaribagh"],
+        Karnataka: ["Bangalore", "Dharwad", "Davangere", "Gadag", "Gulbarga", "Kolar", "Mangalore(Dakshin Kannad)", "Mysore", "Udupi"],
+        Kerala: ["Idukki", "Malappuram"],
+        Ladakh: ["Kargil", "Leh"],
+        Lakshadweep: ["Lakshadweep"],
+        MadhyaPradesh: ["Bhopal", "Burhanpur", "Chhatarpur", "Guna", "Gwalior", "Harda", "Indore", "Narsinghpur", "Satna", "Sheopur", "Ujjain"],
+        Maharashtra: ["Ahmednagar", "Amarawati", "Aurangabad", "Chandrapur", "Jalgaon", "Mumbai", "Nagpur", "Nashik", "Pune", "Sangli", "Sholapur"],
+        Manipur: ["Bishnupur", "Chandel", "Churachandpur", "Imphal East", "Imphal West"],
+        Meghalaya: ["East Garo Hills", "East Jaintia Hills", "East Khasi Hills", "North Garo Hills", "Ri Bhoi"],
+        Mizoram: ["Aizawl", "Champhai", "Kolasib", "Lawngtlai", "Lunglei"],
+        Nagaland: ["Dimapur", "Kiphire", "Kohima", "Longleng", "Mokokchung"],
+        Odisha: ["Angul", "Balangir", "Balasore", "Bargarh", "Bhadrak"],
+        Puducherry: ["Karaikal", "Mahe", "Puducherry", "Yanam"],
+        Punjab: ["Amritsar", "Barnala", "Bhatinda", "Faridkot", "Fatehgarh", "Fazilka", "Ferozpur", "Gurdaspur", "Hoshiarpur", "Jalandhar", "kapurthala", "Ludhiana", "Mansa", "Mohali", "Muktsar", "Nawanshahr", "Pathankot", "Patiala", "Ropar (Rupnagar)", "Sangrur"],
+        Rajasthan: ["Ajmer", "Alwar", "Kota"],
+        Sikkim: ["East Sikkim", "North Sikkim", "South Sikkim", "West Sikkim"],
+        TamilNadu: ["Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore"],
+        Telangana: ["Hyderabad", "Warangal"],
+        Tripura: ["Dhalai", "Gomati", "Khowai", "North Tripura", "Sepahijala"],
+        UttarPradesh: ["Agra", "Aligarh", "Allahabad", "Ambedkarnagar", "Auraiya", "Azamgarh", "Badaun", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", "Basti", "Bijnor", "Bulandshahar", "Chitrakut", "Deoria", "Etah", "Faizabad", "Farukhabad", "Firozabad", "Gautam Budh Nagar", "Ghaziabad", "Gonda", "Gorakhpur", "Hamirpur", "Hardoi", "Hathras", "Jalaun (Orai)", "Jaunpur", "Jhansi", "Jyotiba Phule Nagar", "Kannuj", "Kanpur", "Kaushambi", "Khiri (Lakhimpur)", "Lakhimpur", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Meerut", "Mirzapur", "Muradabad", "Muzaffarnagar", "Padrauna(Kusinagar)", "Pillibhit", "Pratapgarh", "Raebarelli", "Rampur", "Saharanpur", "Sant Kabir Nagar", "Shahjahanpur", "Sitapur", "Sultanpur", "Unnao", "Varanasi"],
+        Uttarakhand: ["Dehradoon", "Garhwal (Pauri)", "Haridwar", "Nanital", "Udham Singh Nagar"],
+        WestBengal: ["Kolkata"]
+
+        // Add more states and their districts as needed
+    };
+
+    function updateDistricts() {
+        const statePicker = document.getElementById("state-picker");
+        const districtPicker = document.getElementById("district-picker");
+        const selectedState = statePicker.value;
+
+        // Clear previous districts
+        districtPicker.innerHTML = '<option value="">Select a District</option>';
+
+        if (selectedState && districtsByState[selectedState]) {
+            // Enable the district dropdown and populate with relevant districts
+            districtPicker.disabled = false;
+            districtsByState[selectedState].forEach(district => {
+                const option = document.createElement("option");
+                option.value = district;
+                option.textContent = district;
+                districtPicker.appendChild(option);
+            });
+        } else {
+            districtPicker.disabled = true;
+        }
+    }
+
+    function getPomegranatePrice() {
+        const date = new Date(document.getElementById('date-picker').value);
+        const state = document.getElementById('state-picker').value;
+        const district = document.getElementById('district-picker').value;
+        const today = new Date();
+        const maxDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 10); // 10 days from today
+
+        if (!state || !district) {
+            alert("Please select a state and a district.");
+            return;
+        }
+
+        if (date > maxDate) {
+            alert("Please select a date within the next 10 days.");
+            document.getElementById('date-picker').value = ''; // Reset the date picker value
+            return;
+        }
+
+        if (date < today) {
+            alert("Please select a date starting from today.");
+            document.getElementById('date-picker').value = ''; // Reset the date picker value
+            return;
+        }
+
+        if (date) {
+            // Here you would integrate with your model to get the price prediction.
+            // For demonstration, let's assume a dummy price is returned.
+            const dummyPrice = '$3.50 per kg';
+            document.getElementById('price-display').textContent = 'Predictedprice for ${district}, ${state} on ${date.toLocaleDateString()}: ${dummyPrice}';
+        }
+    }
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</script>
+</body>
+
+</html>
